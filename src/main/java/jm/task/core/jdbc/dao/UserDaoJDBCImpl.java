@@ -12,7 +12,7 @@ public class UserDaoJDBCImpl extends Util implements UserDao {
     }
     private final Connection connection = Util.getConnection();
 
-    public void createUsersTable() {
+    public void createUsersTable()  {
         try {
             try ( Statement statement = connection.createStatement()) {
 
@@ -30,7 +30,7 @@ public class UserDaoJDBCImpl extends Util implements UserDao {
         System.out.println("DB created successful by JDBC");
     }
 
-    public void dropUsersTable() {
+    public void dropUsersTable()  {
         try {
             try (Statement statement = connection.createStatement()) {
                 statement.execute("DROP TABLE `mydbtest`.`users`;");
@@ -43,7 +43,7 @@ public class UserDaoJDBCImpl extends Util implements UserDao {
         }
 
 
-    public void saveUser(String name, String lastName, byte age) {
+    public void saveUser(String name, String lastName, byte age)  {
         String sql = "INSERT INTO mydbtest.USERS (name,lastName,age) VALUES (?,?,?)";
         try {
             try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
@@ -99,7 +99,7 @@ public class UserDaoJDBCImpl extends Util implements UserDao {
         return usersList;
     }
 
-    public void cleanUsersTable() {
+    public void cleanUsersTable()  {
         String sql = "DELETE  FROM mydbtest.users";
 
         try {
