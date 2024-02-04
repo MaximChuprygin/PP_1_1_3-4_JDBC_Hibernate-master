@@ -8,8 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserDaoJDBCImpl extends Util implements UserDao {
-    public UserDaoJDBCImpl() { // требование в условии задачи
-    }
+    public UserDaoJDBCImpl() {}
     private final Connection connection = Util.getConnection();
 
     public void createUsersTable()  {

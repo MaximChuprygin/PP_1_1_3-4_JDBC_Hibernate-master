@@ -8,8 +8,7 @@ import org.hibernate.Transaction;
 import java.util.List;
 
 public class UserDaoHibernateImpl extends Util implements UserDao {
-    public UserDaoHibernateImpl() { // требование в условии задачи
-    }
+    public UserDaoHibernateImpl() {}
     @Override
     public void createUsersTable() {
         String sql = "CREATE TABLE IF NOT EXISTS users " +
