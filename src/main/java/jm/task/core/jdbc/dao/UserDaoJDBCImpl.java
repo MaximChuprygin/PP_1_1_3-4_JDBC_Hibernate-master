@@ -7,7 +7,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserDaoJDBCImpl extends Util implements UserDao {
+public class UserDaoJDBCImpl implements UserDao  {
     public UserDaoJDBCImpl() {}
     private final Connection connection = Util.getConnection();
 
@@ -23,7 +23,7 @@ public class UserDaoJDBCImpl extends Util implements UserDao {
                         "  PRIMARY KEY (`id`),");
             }
 
-        } catch (SQLException e) {
+        } catch (SQLException e ) {
             System.out.println("An error occurred while creating the table" + e.getMessage());
         }
         System.out.println("DB created successful by JDBC");
